@@ -17,7 +17,7 @@ int	btree_level_count(t_btree *root)
 	int	left;
 	int	right;
 
-	if (!root)
+	if (!root || !root->left || !root->right)
 		return (0);
 	left = btree_level_count(root->left);
 	right = btree_level_count(root->right);
@@ -53,9 +53,9 @@ int	btree_level_count(t_btree *root)
 // 	left->left = leftleft;
 // 	left->right = leftright;
 
-// 	printf("3 = %d\n", btree_level_count(root));
-// 	printf("2 = %d\n", btree_level_count(left));
-// 	printf("1 = %d\n", btree_level_count(leftleft));
+// 	printf("2 = %d\n", btree_level_count(root));
+// 	printf("1 = %d\n", btree_level_count(left));
+// 	printf("0 = %d\n", btree_level_count(leftleft));
 // 	printf("0 = %d\n", btree_level_count(0));
 // 	return (0);
 // }
