@@ -4,11 +4,15 @@
 // #include <stdlib.h>
 // #include <stdio.h>
 
-void	*btree_search_item(t_btree *root, void *data_ref, int (*cmpf)(void *, void *))
+void	*btree_search_item(
+	t_btree *root,
+	void *data_ref,
+	int (*cmpf)(void *, void *)
+)
 {
 	void	*left;
 	void	*right;
-	
+
 	if (!root)
 		return (0);
 	left = btree_search_item(root->left, data_ref, cmpf);
