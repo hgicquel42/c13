@@ -1,7 +1,7 @@
 #include "ft_btree.h"
+#include <stdlib.h>
 
 // // REMOVE
-// #include <stdlib.h>
 // #include <stdio.h>
 // #include <unistd.h>
 
